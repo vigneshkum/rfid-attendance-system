@@ -1,0 +1,29 @@
+body{
+	padding:0.5em;
+}
+div#cp{
+	#background-color:#F6CECE;
+	background-color:#FFF8C6;
+	#background-image:url('static/css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png');
+}
+
+div#panel{
+	background-color:#DDDDDD;
+	text-align:center;
+}
+
+table tr:first-child
+{
+color:yellow;
+} 
+
+table{
+color:gray;
+}
+
+#popUp{ 
+display: none;
+text-align:center;
+font-weight:bold;
+font-size:2em;
+}

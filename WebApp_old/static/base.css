@@ -1,0 +1,60 @@
+.curvedBorder{
+	border:1px solid;
+	#border-color:#DDDDDD;
+	border-color:#CECEF6;
+	border-radius:5px;
+	padding: 1em;
+}
+
+.curvedShadow{
+	border:1px solid;
+	border-color:#DDDDDD;
+	#border-color:#FFF8C6;
+	border-radius:5px;
+	-webkit-box-shadow: 3px 3px 3px #888888; /* Safari */
+	box-shadow: 3px 3px 3px  #888888;
+	padding: 1em;
+}
+
+.urgent{
+	color:red;
+}
+
+.close{
+	position:relative;
+	float:right;
+	right:-0.5em;
+	top:-0.5em;
+}
+
+.alert{
+	color:yellow;
+	font-size:1em;
+}
+
+table.gridtable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+}
+table.gridtable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
+
+.center{
+	text-align:center;
+}
