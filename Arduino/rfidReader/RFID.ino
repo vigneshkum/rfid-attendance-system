@@ -19,7 +19,7 @@ void initRFID(){
     Serial.println("Connected to RFID Scanner.");
   }
 }
-
+/*
 void checkRFID(){
   //Store CardID in an array
   if(rfid.available()){
@@ -28,31 +28,19 @@ void checkRFID(){
     //Serial.write(rfid.read());
   }
   if(rfidCount==12){
-    //Log card entry to the Memory Card
-    //Generate Filename
-    String fileName = "logs/"+getDate()+".txt";
-    char logFile[fileName.length()+1];
-    fileName.toCharArray(logFile,fileName.length()+1);
-    //log attendance
-    logAttendance(logFile,cardID);
-    delay(20);
+    //Reset for new entry
+    rfidCount=0;
+    if(debugMode){
+      Serial.println("CardID = ");
+      printCardID();
+      Serial.println();
+    }
     //Display User on the LCD Display
     displayCardID(cardID);
     delay(1000);
     clearLCD();
     getUser(cardID);
-    delay(20);
-    //comment this code
-    printCardID();
-    Serial.println("");
-    Serial.println("About to display time");
-    timeBuff = getTime();
-    Serial.print("Value of timeBuff = ");
-    Serial.println(timeBuff);
-    Display(timeBuff,1);
     delay(2000);
-    //Reset for new entry
-    rfidCount=0;
     clearLCD();
     delay(50);
     Display(welcomeMsg,0);
@@ -64,6 +52,7 @@ void printCardID(){
   for(int i=0;i<12;i++)
     Serial.write(cardID[i]);
 }
+*/
 
 
 

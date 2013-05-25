@@ -1,15 +1,10 @@
-#include <Time.h>  
-#include <Wire.h>  
-#include <DS1307RTC.h>  // a basic DS1307 library that returns time as a time_t
-
+//Control Variables
 boolean deviceReady = true;
-boolean debugMode = false;
-String welcomeMsg = "Welcome!";
-String timeBuff = ".";
-#define TIME_HEADER 'T'   // Header tag for serial time sync message
-#define SWIPE_HEADER 'S'
-#define verbose 0
+boolean debugMode = true;
+//Welcome Message
+String msg = "Welcome!";
 
+//Initialization Function
 void setup() {
   Serial.begin(9600);
   if(debugMode){
@@ -18,7 +13,7 @@ void setup() {
     Serial.println("Now Initializing Dependent Modules and Hardware.");
   }
   //Initializing Hardware Modules
-  initTime();
+  //initTime();
   initMemory();
   initRFID();
   initDisplay();
@@ -35,40 +30,16 @@ void setup() {
     Serial.println("<==========End of SETUP()==========>");
   }
   // Print Welcome message to the LCD.
-  Display(welcomeMsg,0);
+  Display(msg,0);
 }
 
 void loop() {
   if(deviceReady){
-    /*
-    checkRFID();
-     */
-    Display(getTime(),1);
-    /*
-    //Check if there is some incoming data and process headers
-     if(Serial.available()){
-     //Read the incoming character
-     char c = Serial.read() ; 
-     if(c==SWIPE_HEADER) {
-     clearLCD();
-     Display("Sending CardID",0);
-     getSwipe();
-     }
-     if(c==TIME_HEADER) {
-     clearLCD();
-     Display("Time Sync!",0);
-     delay(200);
-     if(debugMode){
-     Serial.print("Time Sync c = ");
-     Serial.println(c);
-     }
-     TimeSyncFromPC();
-     }
-     
-     } 
-     */
+    //checkRFID();
   }
 }
+
+
 
 
 

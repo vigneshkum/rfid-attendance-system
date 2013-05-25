@@ -20,7 +20,7 @@ void initMemory(){
   }
   if (!SD.begin(CS)) {
     Serial.println("SD Card initialization Failed!");
-    welcomeMsg = "No Memory Card?";
+    msg = "No Memory Card?";
     //Display("No Memory Card?",0);
     //Disable the RFID READER
     deviceReady = false;
@@ -31,6 +31,7 @@ void initMemory(){
   }
 }
 
+/*
 void logAttendance(char file[], byte cardID[]){
   File logFile = SD.open(file, FILE_WRITE);
   delay(20);
@@ -64,5 +65,6 @@ void logAttendance(char file[], byte cardID[]){
     Serial.println(file);
   }
 }
+*/
 
 
