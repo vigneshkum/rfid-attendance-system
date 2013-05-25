@@ -35,7 +35,7 @@ void setup() {
 
 void loop() {
   if(deviceReady){
-    //checkRFID();
+    checkRFID();
   }
 }
 

@@ -19,7 +19,7 @@ void initRFID(){
     Serial.println("Connected to RFID Scanner.");
   }
 }
-/*
+
 void checkRFID(){
   //Store CardID in an array
   if(rfid.available()){
@@ -31,19 +31,25 @@ void checkRFID(){
     //Reset for new entry
     rfidCount=0;
     if(debugMode){
-      Serial.println("CardID = ");
+      Serial.print("checkRFID() :: ");
+      Serial.print("CardID = ");
       printCardID();
       Serial.println();
     }
+    //Log CardID with TimeStamp
+    /* Write CODE */
     //Display User on the LCD Display
     displayCardID(cardID);
     delay(1000);
+    /*
     clearLCD();
-    getUser(cardID);
+     delay(50);
+     getUser(cardID);
+     */
     delay(2000);
     clearLCD();
     delay(50);
-    Display(welcomeMsg,0);
+    Display(msg,0);
     delay(30);
   }
 }
@@ -52,7 +58,8 @@ void printCardID(){
   for(int i=0;i<12;i++)
     Serial.write(cardID[i]);
 }
-*/
+
+
 
 
 
