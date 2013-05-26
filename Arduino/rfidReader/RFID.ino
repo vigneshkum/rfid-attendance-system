@@ -34,21 +34,19 @@ void checkRFID(){
       Serial.print("checkRFID() :: ");
       Serial.print("CardID = ");
       printCardID();
-      Serial.println();
+      Serial.print(" : ");
     }
     //Log CardID with TimeStamp
     /* Write CODE */
     //Display User on the LCD Display
     displayCardID(cardID);
     delay(1000);
-    /*
     clearLCD();
-     delay(50);
-     getUser(cardID);
-     */
+    delay(30);
+    displayUser(cardID);
     delay(2000);
     clearLCD();
-    delay(50);
+    delay(30);
     Display(msg,0);
     delay(30);
   }
@@ -58,6 +56,7 @@ void printCardID(){
   for(int i=0;i<12;i++)
     Serial.write(cardID[i]);
 }
+
 
 
 
