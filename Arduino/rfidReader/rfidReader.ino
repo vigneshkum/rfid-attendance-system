@@ -3,6 +3,8 @@ boolean deviceReady = true;
 boolean debugMode = true;
 //Welcome Message
 String msg = "Welcome!";
+//Header Messages
+#define SWIPE_HEADER 'S'
 
 //Initialization Function
 void setup() {
@@ -36,8 +38,21 @@ void setup() {
 void loop() {
   if(deviceReady){
     checkRFID();
+
+    //Request Handler Code
+    if(Serial.available()){
+      //Read the incoming character
+      char c = Serial.read() ; 
+      if(c==SWIPE_HEADER) {
+        clearLCD();
+        Display("Sending CardID",0);
+        getSwipe();
+      }
+    }
   }
 }
+
+
 
 
 
