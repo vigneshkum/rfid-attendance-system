@@ -1,5 +1,5 @@
 void getSwipe(){
-  Serial.print("<");
+  //Serial.print("<");
   printCardID();
   Serial.println(">"); 
 }

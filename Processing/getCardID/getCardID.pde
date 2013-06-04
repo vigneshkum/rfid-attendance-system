@@ -11,7 +11,7 @@ void setup() {
   myPort = new Serial(this, Serial.list()[portIndex], 9600);
   output = createWriter("../data/cardID.TXT");
   myPort.write("S");
-  background(255, 0, 255);
+  background(255, 0, 0);
 }
 
 void draw() {
@@ -19,7 +19,7 @@ void draw() {
 
     char temp = char(myPort.read());
     if (temp == '>') {
-      background(255, 255, 0);
+      background(0, 255, 0);
       println("\n End of File");
       output.close();
     }

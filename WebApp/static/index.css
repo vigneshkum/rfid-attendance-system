@@ -1,0 +1,13 @@
+p#status{
+	border:1px dashed #DDDDDD;
+	height:1.5em;
+	background-color:#FFFFD5;
+	text-align:center;
+	padding:1em;
+	font-weight:strong;
+	display:none;
+}
+div#tabs{
+	overflow:scroll;
+	height:40%;
+}
